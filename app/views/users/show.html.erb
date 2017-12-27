@@ -1,0 +1,11 @@
+<ul>
+  <li> Name:<%= @user.name%> </li>
+  <li> Mood<%= @user.mood%> </li>
+    <li> Tickets: <%=@user.tickets%> </li>
+    <li>  Height:<%= @user.height%> </li>
+  <li>
+     <%if @user.admin %>
+     admin
+     <%end%>
+  </li>
+</ul>

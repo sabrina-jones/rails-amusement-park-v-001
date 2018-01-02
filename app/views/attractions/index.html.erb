@@ -1,3 +1,15 @@
-<%= render(@attractions) || "There are no attractions!" %>
-
+<%#= render(@attractions) || "There are no attractions!" %>
 <%#= #render partial: "attractions", collection: @attractions %>
+
+
+<% @attractions.each do |attraction| %>
+  <% if current_user.admin %>
+    <%= link_to "Show #{attraction.name}", attraction_path(attraction) %><br>
+  <% else %>
+    <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %><br>
+  <% end %>
+<% end %>
+
+<% if current_user.admin %>
+     <%= link_to "New Attraction", new_attraction_path %>
+ <% end %>

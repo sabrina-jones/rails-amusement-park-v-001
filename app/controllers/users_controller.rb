@@ -20,6 +20,8 @@ class UsersController < ApplicationController
 
   def show
     redirect_to '/' unless current_user
+    #add messages here
+    
   end
 
 

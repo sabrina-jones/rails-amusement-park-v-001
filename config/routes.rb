@@ -11,4 +11,11 @@ delete '/logout' => 'sessions#destroy'
 
 get '/attractions', to: 'attractions#show'
 post '/attractions/new', to: 'attractions#show'
+
+get '/rides/new', to: 'rides#new'
+post '/rides/new', to: 'rides#create'
+
+ resources :users
+ resources :attractions
+ resources :rides
 end

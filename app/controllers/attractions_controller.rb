@@ -14,10 +14,8 @@ class AttractionsController < ApplicationController
   end
 
   def show
-    if logged_in?
       @attraction = Attraction.find(params[:id])
       @user = current_user
-    end
   end
 
   def edit
@@ -42,5 +40,6 @@ class AttractionsController < ApplicationController
       :min_height
     )
   end
+
 
 end

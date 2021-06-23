@@ -1,5 +1,5 @@
 class AttractionsController < ApplicationController
-
+  #for changes
   def index
     @attractions = Attraction.all
   end
